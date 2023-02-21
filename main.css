@@ -1,0 +1,14 @@
+.buttonArea{
+    padding:15px 10px;
+}
+
+#count{
+    padding-left: 45px;
+    padding-bottom: 30px;
+    font-size: 35px;
+}
+
+.button {
+    width: 80px;
+    height: 50px;
+}

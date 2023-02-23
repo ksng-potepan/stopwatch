@@ -6,16 +6,19 @@ let second = 0
 let timerId
 
 const addSecound = () => {
-    second += 0.1
+    second += 1
     second = Number(second.toFixed(1))
     
     
     //秒から時、分、秒を求める
-    const hour = Math.floor(second/3600)
-    const minute = Math.floor((second%3600)/60)
-    const second1 = Math.floor(second%60)
-    const msec = Math.floor((second - Math.floor(second))*10)
+    const hour = Math.floor(second/36000)
+    const minute = Math.floor((second%36000)/600)
+    const second1 = Math.floor((second%600)/10)
+    const msec = second%10
     count.innerText = `${hour}:${minute}:${second1}:${msec}`
+    
+    
+    console.log(second)
 }
 
 start.addEventListener("click", () => {
